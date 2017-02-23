@@ -15,6 +15,7 @@
   shell: pg_isready
   ignore_errors: yes
   register: pg_isready_result
+  changed_when: False
 # This is due to a weird locale error happening when apt-get installing postgres over SSH. For some
 # weird locale reason, apt-get is unable to create the clusters and asks to run the command below
 # manually. If we run it, it works (strangely). So there we go, we run it.
